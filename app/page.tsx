@@ -72,7 +72,6 @@ export default function Home() {
           <span>PORT LOKO CITY</span>
         </div>
       </section>
-
       <section id="about" className="section">
         <div className="container two-column">
           <div>
