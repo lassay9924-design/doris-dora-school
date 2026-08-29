@@ -32,30 +32,39 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="home" className="hero">
-        <Image
-          className="hero-image"
-          src="/images/sports-field.jpeg"
-          alt="Students at Doris and Dora International School"
-          fill
-          priority
-          sizes="100vw"
-        />
-        <div className="hero-overlay" />
-        <div className="container hero-content">
-          <div className="hero-badge">PORT LOKO CITY • SIERRA LEONE</div>
-          <h1>Where integrity, love and learning shape tomorrow.</h1>
-          <p>
-            A welcoming learning community committed to academic growth,
-            character, leadership and the development of confident young people.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#contact">Start an Application</a>
-            <a className="button button-light" href="#about">Discover Our School</a>
-          </div>
-        </div>
-      </section>
+      <section
+  className="hero"
+  style={{
+    backgroundImage: "url('/sports-field.jpeg')",
+  }}
+>
+  <div className="hero-overlay"></div>
 
+  <div className="hero-content">
+    <span className="location">PORT LOKO CITY • SIERRA LEONE</span>
+
+    <h1>
+      Where integrity, love and
+      <br />
+      learning shape tomorrow.
+    </h1>
+
+    <p>
+      A welcoming learning community committed to academic growth,
+      character, leadership and the development of confident young people.
+    </p>
+
+    <div className="hero-buttons">
+      <a href="#contact" className="primary-button">
+        Start an Application
+      </a>
+
+      <a href="#about" className="secondary-button">
+        Discover Our School
+      </a>
+    </div>
+  </div>
+</section>
       <section className="motto-strip">
         <div className="container motto-inner">
           <span>OUR MOTTO</span>
