@@ -3,3 +3,8 @@ sports-field.jpeg
 graduation-1.jpeg
 graduation-2.jpeg
 graduation-3.jpeg
+backgroundImage: "url('/sports-field.jpeg')"
+<img src="/school-logo.jpeg" alt="Doris & Dora International School" />
+<img src="/graduation-1.jpeg" alt="Graduation" />
+<img src="/graduation-2.jpeg" alt="Graduation" />
+<img src="/graduation-3.jpeg" alt="Graduation" />
