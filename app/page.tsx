@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const gallery = [
   {
     src: "/graduation-1.jpeg",
@@ -11,7 +9,7 @@ const gallery = [
   },
   {
     src: "/graduation-3.jpeg",
-    alt: "Student graduation celebration",
+    alt: "Students celebrating their achievement",
   },
   {
     src: "/sports-field.jpeg",
@@ -22,21 +20,23 @@ const gallery = [
 export default function Home() {
   return (
     <main>
+      {/* HEADER */}
       <header className="site-header">
         <div className="container nav">
-          <a className="brand" href="#home">
-           <img
-  src="/school-logo.jpeg"
-  alt="Doris & Dora International School"
-  className="school-logo"
-/>
-            <span>
+          <a href="#home" className="brand">
+            <img
+              src="/school-logo.jpeg"
+              alt="Doris & Dora International School"
+              className="school-logo"
+            />
+
+            <div className="brand-text">
               <strong>Doris &amp; Dora</strong>
-              <small>International School</small>
-            </span>
+              <span>International School</span>
+            </div>
           </a>
 
-          <nav className="desktop-nav" aria-label="Main navigation">
+          <nav className="desktop-nav">
             <a href="#about">About</a>
             <a href="#programs">Programs</a>
             <a href="#life">School Life</a>
@@ -44,217 +44,264 @@ export default function Home() {
             <a href="#contact">Contact</a>
           </nav>
 
-          <a className="nav-cta" href="#contact">Apply Now</a>
+          <a href="#contact" className="nav-button">
+            Apply Now
+          </a>
         </div>
       </header>
 
-      <section
-  className="hero"
-  style={{
-    backgroundImage: "url('/sports-field.jpeg')",
-  }}
->
-  <div className="hero-overlay"></div>
+      {/* HERO */}
+      <section id="home" className="hero">
+        <div className="hero-overlay" />
 
-  <div className="hero-content">
-    <span className="location">PORT LOKO CITY • SIERRA LEONE</span>
+        <div className="container hero-content">
+          <div className="location-pill">
+            PORT LOKO CITY • SIERRA LEONE
+          </div>
 
-    <h1>
-      Where integrity, love and
-      <br />
-      learning shape tomorrow.
-    </h1>
+          <h1>
+            Where integrity, love
+            <br />
+            and learning shape tomorrow.
+          </h1>
 
-    <p>
-      A welcoming learning community committed to academic growth,
-      character, leadership and the development of confident young people.
-    </p>
+          <p>
+            A welcoming learning community committed to academic growth,
+            character, leadership and the development of confident young
+            people.
+          </p>
 
-    <div className="hero-buttons">
-      <a href="#contact" className="primary-button">
-        Start an Application
-      </a>
+          <div className="hero-buttons">
+            <a href="#contact" className="primary-button">
+              Start an Application
+            </a>
 
-      <a href="#about" className="secondary-button">
-        Discover Our School
-      </a>
-    </div>
-  </div>
-</section>
-      <section className="motto-strip">
-        <div className="container motto-inner">
+            <a href="#about" className="secondary-button">
+              Discover Our School
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-bottom">
           <span>OUR MOTTO</span>
           <strong>Integrity • Love • Learning</strong>
           <span>PORT LOKO CITY</span>
         </div>
       </section>
-      <section id="about" className="section">
+
+      {/* ABOUT */}
+      <section id="about" className="section about-section">
         <div className="container two-column">
           <div>
             <p className="eyebrow">WELCOME TO DORIS &amp; DORA</p>
-            <h2>Education with purpose. Character with confidence.</h2>
-            <p className="lead">
-              Doris and Dora International School is dedicated to creating an
-              environment where students can learn, grow and discover their
-              potential.
+
+            <h2>
+              Building strong minds,
+              <br />
+              strong character.
+            </h2>
+
+            <p className="section-text">
+              Doris &amp; Dora International School is a welcoming educational
+              community dedicated to helping young people learn, grow and
+              discover their potential.
             </p>
-            <p>
-              Our school brings together academic learning, personal
-              development, creativity, leadership and activities that help
-              students become responsible members of their communities.
+
+            <p className="section-text">
+              Through quality education, positive values and a supportive
+              environment, we prepare students to become confident,
+              responsible and compassionate leaders.
             </p>
-            <a className="text-link" href="#contact">Learn more about enrollment →</a>
+
+            <a href="#contact" className="text-link">
+              Learn more about our school →
+            </a>
           </div>
 
-          <div className="logo-card">
-            <Image
-              src="/images/school-logo.jpeg"
-              alt="Doris and Dora International School crest"
-              width={520}
-              height={520}
-            />
-            <div>
-              <strong>Integrity, Love and Learning.</strong>
-              <span>Our values guide the way we teach, lead and serve.</span>
+          <div className="values-card">
+            <div className="value">
+              <span>01</span>
+              <div>
+                <h3>Integrity</h3>
+                <p>
+                  We encourage honesty, responsibility and strong personal
+                  values.
+                </p>
+              </div>
+            </div>
+
+            <div className="value">
+              <span>02</span>
+              <div>
+                <h3>Love</h3>
+                <p>
+                  We create a caring environment where every student can feel
+                  valued.
+                </p>
+              </div>
+            </div>
+
+            <div className="value">
+              <span>03</span>
+              <div>
+                <h3>Learning</h3>
+                <p>
+                  We inspire curiosity, academic growth and a lifelong love of
+                  learning.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="programs" className="section section-soft">
+      {/* PROGRAMS */}
+      <section id="programs" className="section programs-section">
         <div className="container">
           <div className="section-heading">
             <p className="eyebrow">WHAT WE OFFER</p>
-            <h2>A school experience built around the whole student.</h2>
-            <p>Strong academics, meaningful activities and a supportive school community.</p>
-          </div>
-
-          <div className="cards">
-            <article className="card">
-              <div className="icon">01</div>
-              <h3>Quality Education</h3>
-              <p>Learning experiences designed to build knowledge, confidence and a strong foundation for the future.</p>
-            </article>
-            <article className="card">
-              <div className="icon">02</div>
-              <h3>Leadership &amp; Character</h3>
-              <p>Students are encouraged to lead with integrity, respect others and take responsibility for their growth.</p>
-            </article>
-            <article className="card">
-              <div className="icon">03</div>
-              <h3>Sports &amp; Activities</h3>
-              <p>Opportunities beyond the classroom help students develop teamwork, discipline, creativity and confidence.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="life" className="section">
-        <div className="container two-column reverse-mobile">
-          <div className="photo-feature">
-            <Image
-              src="/images/graduation-1.jpeg"
-              alt="Students celebrating graduation"
-              fill
-              sizes="(max-width: 800px) 100vw, 50vw"
-            />
-          </div>
-          <div>
-            <p className="eyebrow">SCHOOL LIFE</p>
-            <h2>Celebrating achievement and possibility.</h2>
-            <p className="lead">
-              From the classroom to the field, students have opportunities to
-              learn, compete, celebrate milestones and build memories together.
-            </p>
-            <ul className="check-list">
-              <li>Academic development and lifelong learning</li>
-              <li>Sports and teamwork</li>
-              <li>Leadership and personal growth</li>
-              <li>Celebrations of student achievement</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-     <section id="gallery" className="gallery-section">
-  <div className="gallery-container">
-    <div className="gallery-heading">
-      <span>OUR SCHOOL</span>
-      <h2>Life at Doris & Dora</h2>
-      <p>
-        Celebrating our students, achievements, and the moments
-        that make our school community special.
-      </p>
-    </div>
-
-    <div className="gallery-grid">
-      <div className="gallery-card">
-        <img
-          src="/graduation-1.jpeg"
-          alt="Doris & Dora International School graduation"
-        />
-      </div>
-
-      <div className="gallery-card">
-        <img
-          src="/graduation-2.jpeg"
-          alt="Students at graduation"
-        />
-      </div>
-
-      <div className="gallery-card">
-        <img
-          src="/graduation-3.jpeg"
-          alt="Graduation celebration"
-        />
-      </div>
-
-      <div className="gallery-card">
-        <img
-          src="/sports-field.jpeg"
-          alt="Doris & Dora International School sports field"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-      <section id="contact" className="contact-section">
-        <div className="container contact-grid">
-          <div>
-            <p className="eyebrow eyebrow-light">ADMISSIONS</p>
-            <h2>Ready to learn more?</h2>
+            <h2>Learning with purpose.</h2>
             <p>
-              Contact Doris and Dora International School for admissions,
-              enrollment information, school visits and questions about our
-              programs.
+              A balanced educational experience designed to help students
+              succeed academically and personally.
             </p>
-            <div className="contact-details">
-              <div><span>Location</span><strong>Port Loko City, Sierra Leone</strong></div>
-              <div><span>School</span><strong>Doris and Dora International School</strong></div>
-            </div>
+          </div>
+
+          <div className="program-grid">
+            <article className="program-card">
+              <span className="program-number">01</span>
+              <h3>Academic Excellence</h3>
+              <p>
+                Encouraging students to develop strong foundations, critical
+                thinking and a passion for learning.
+              </p>
+            </article>
+
+            <article className="program-card featured">
+              <span className="program-number">02</span>
+              <h3>Character Development</h3>
+              <p>
+                Helping students grow into respectful, responsible and
+                confident members of their communities.
+              </p>
+            </article>
+
+            <article className="program-card">
+              <span className="program-number">03</span>
+              <h3>Leadership &amp; Growth</h3>
+              <p>
+                Giving young people opportunities to build confidence,
+                teamwork and leadership skills.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* SCHOOL LIFE */}
+      <section id="life" className="life-section">
+        <div className="life-image">
+          <img
+            src="/sports-field.jpeg"
+            alt="Students participating in school activities"
+          />
+        </div>
+
+        <div className="life-content">
+          <p className="eyebrow">SCHOOL LIFE</p>
+
+          <h2>Learning happens beyond the classroom.</h2>
+
+          <p>
+            Our students are encouraged to participate, collaborate and build
+            friendships through school activities and experiences.
+          </p>
+
+          <div className="life-points">
+            <span>✓ Teamwork</span>
+            <span>✓ Confidence</span>
+            <span>✓ Creativity</span>
+            <span>✓ Leadership</span>
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section id="gallery" className="section gallery-section">
+        <div className="container">
+          <div className="section-heading gallery-heading">
+            <p className="eyebrow">OUR COMMUNITY</p>
+            <h2>Moments worth remembering.</h2>
+            <p>
+              A glimpse into the experiences and celebrations that make our
+              school community special.
+            </p>
+          </div>
+
+          <div className="gallery-grid">
+            {gallery.map((image, index) => (
+              <div
+                className={`gallery-item gallery-item-${index + 1}`}
+                key={image.src}
+              >
+                <img src={image.src} alt={image.alt} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT / APPLICATION */}
+      <section id="contact" className="contact-section">
+        <div className="container contact-inner">
+          <div>
+            <p className="eyebrow">GET IN TOUCH</p>
+            <h2>Give your child a place to grow.</h2>
+            <p>
+              Interested in learning more about Doris &amp; Dora International
+              School? Contact us to learn about admissions and enrollment.
+            </p>
           </div>
 
           <div className="contact-card">
-            <h3>Begin your inquiry</h3>
-            <p>Replace the contact details below with the school&apos;s official phone number, WhatsApp and email before publishing.</p>
-            <div className="placeholder-contact">
-              <div>📞 <strong>School phone:</strong> +232 33 418107</div>
-              <div>📞 <strong>School phone:</strong> +232 90 278551</div>
-              <div>💬 <strong>WhatsApp:</strong> +232 90 278551</div>
-              <div>✉️ <strong>Email:</strong> dorisanddoraschool@gmail.com</div>
-            </div>
-            <a className="button button-primary full" href="#home">Back to top</a>
+            <h3>Admissions</h3>
+            <p>We would love to hear from you.</p>
+
+            <a href="mailto:info@dorisdorainternationalschool.com">
+              Contact the School
+            </a>
           </div>
         </div>
       </section>
 
+      {/* FOOTER */}
       <footer className="footer">
         <div className="container footer-inner">
-          <div>
-            <strong>Doris &amp; Dora International School</strong>
-            <span>Port Loko City, Sierra Leone</span>
+          <div className="footer-brand">
+            <img
+              src="/school-logo.jpeg"
+              alt="Doris & Dora International School"
+              className="school-logo"
+            />
+
+            <div>
+              <strong>Doris &amp; Dora</strong>
+              <span>International School</span>
+            </div>
           </div>
-          <span>Integrity • Love • Learning</span>
+
+          <div className="footer-motto">
+            Integrity • Love • Learning
+          </div>
+
+          <div className="footer-location">
+            Port Loko City, Sierra Leone
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          © {new Date().getFullYear()} Doris &amp; Dora International School.
+          All rights reserved.
         </div>
       </footer>
     </main>
