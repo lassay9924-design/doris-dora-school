@@ -25,10 +25,11 @@ export default function Home() {
       <header className="site-header">
         <div className="container nav">
           <a className="brand" href="#home">
-            <img
+           <img
   src="/school-logo.jpeg"
   alt="Doris & Dora International School"
   className="school-logo"
+/>
             <span>
               <strong>Doris &amp; Dora</strong>
               <small>International School</small>
