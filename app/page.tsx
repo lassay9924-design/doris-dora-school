@@ -172,22 +172,45 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="gallery" className="section section-soft">
-  <div className="container">
-    <div className="section-heading">
-      <p className="eyebrow">OUR COMMUNITY</p>
-      <h2>Moments from school life.</h2>
+     <section id="gallery" className="gallery-section">
+  <div className="gallery-container">
+    <div className="gallery-heading">
+      <span>OUR SCHOOL</span>
+      <h2>Life at Doris & Dora</h2>
+      <p>
+        Celebrating our students, achievements, and the moments
+        that make our school community special.
+      </p>
     </div>
 
-    <div className="gallery">
-      {gallery.map((photo) => (
-        <div className="gallery-item" key={photo.src}>
-          <img
-            src={photo.src}
-            alt={photo.alt}
-          />
-        </div>
-      ))}
+    <div className="gallery-grid">
+      <div className="gallery-card">
+        <img
+          src="/graduation-1.jpeg"
+          alt="Doris & Dora International School graduation"
+        />
+      </div>
+
+      <div className="gallery-card">
+        <img
+          src="/graduation-2.jpeg"
+          alt="Students at graduation"
+        />
+      </div>
+
+      <div className="gallery-card">
+        <img
+          src="/graduation-3.jpeg"
+          alt="Graduation celebration"
+        />
+      </div>
+
+      <div className="gallery-card">
+        <img
+          src="/sports-field.jpeg"
+          alt="Doris & Dora International School sports field"
+        />
+      </div>
     </div>
   </div>
 </section>
