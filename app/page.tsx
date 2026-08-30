@@ -1,10 +1,22 @@
 import Image from "next/image";
 
 const gallery = [
-  { src: "/images/sports-field.jpeg", alt: "Students taking part in sports activities" },
-  { src: "/images/graduation-1.jpeg", alt: "Students celebrating graduation" },
-  { src: "/images/graduation-2.jpeg", alt: "Graduating students" },
-  { src: "/images/graduation-3.jpeg", alt: "Student graduation celebration" },
+  {
+    src: "/graduation-1.jpeg",
+    alt: "Students celebrating graduation",
+  },
+  {
+    src: "/graduation-2.jpeg",
+    alt: "Graduating students",
+  },
+  {
+    src: "/graduation-3.jpeg",
+    alt: "Student graduation celebration",
+  },
+  {
+    src: "/sports-field.jpeg",
+    alt: "Students participating in school activities",
+  },
 ];
 
 export default function Home() {
@@ -161,21 +173,24 @@ export default function Home() {
       </section>
 
       <section id="gallery" className="section section-soft">
-        <div className="container">
-          <div className="section-heading">
-            <p className="eyebrow">OUR COMMUNITY</p>
-            <h2>Moments from school life.</h2>
-          </div>
-          <div className="gallery">
-            {gallery.map((item, index) => (
-              <div className={`gallery-item gallery-${index + 1}`} key={item.src}>
-                <Image src={item.src} alt={item.alt} fill sizes="(max-width: 800px) 100vw, 50vw" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  <div className="container">
+    <div className="section-heading">
+      <p className="eyebrow">OUR COMMUNITY</p>
+      <h2>Moments from school life.</h2>
+    </div>
 
+    <div className="gallery">
+      {gallery.map((photo) => (
+        <div className="gallery-item" key={photo.src}>
+          <img
+            src={photo.src}
+            alt={photo.alt}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       <section id="contact" className="contact-section">
         <div className="container contact-grid">
           <div>
